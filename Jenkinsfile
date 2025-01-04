@@ -31,4 +31,8 @@ pipeline {
     }
 
   }
+  environment {
+    registry = 'Didar83'
+    registryCredential = 'dockerhub_id'
+  }
 }
