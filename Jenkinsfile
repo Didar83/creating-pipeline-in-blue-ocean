@@ -19,5 +19,16 @@ pipeline {
       }
     }
 
+    stage('Docker pubish') {
+      steps {
+        script {
+          docker.withRegistry( '', registryCredential ) {
+            dockerImage.push()
+          }
+        }
+
+      }
+    }
+
   }
 }
